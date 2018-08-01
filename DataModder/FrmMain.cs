@@ -94,11 +94,11 @@ namespace DataModder
 			File.WriteAllText(path, hash);
 		}
 
-		private void LoadAndApplyMods()
+		public void LoadAndApplyMods()
 		{
 			var dataPath = "data";
 			var packagesPath = ModPack.GetPackagePath();
-			var modsPath = Path.Combine(ToolFolderName, "mods");
+            var modsPath = "datamods";
 			var timer = Stopwatch.StartNew();
 
 			Trace.WriteLine("Mods:   " + Path.GetFullPath(modsPath));
